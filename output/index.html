@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><title>Indian Liver Patient Predictor</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:#0F172A;color:#E2E8F0}
+  .hdr{background:linear-gradient(135deg,#1a3a2a,#14532d);padding:28px 40px;border-bottom:1px solid #166534}
+  .hdr h1{font-size:22px;font-weight:600;color:#F0FFF4;margin-bottom:4px}
+  .hdr p{color:#86EFAC;font-size:13px}
+  .wrap{max-width:1100px;margin:0 auto;padding:28px 20px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:28px}
+  .stat{background:#1E293B;border-radius:10px;padding:16px;text-align:center;border:1px solid #334155}
+  .stat .n{font-size:26px;font-weight:600}
+  .stat .l{font-size:11px;color:#94A3B8;text-transform:uppercase;letter-spacing:.4px;margin-top:3px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+  .card{background:#1E293B;border:1px solid #334155;border-radius:12px;padding:16px 18px;
+         display:flex;align-items:center;gap:12px;text-decoration:none;color:#E2E8F0;transition:border-color .2s}
+  .card:hover{border-color:#22C55E}
+  .icon{font-size:24px;flex-shrink:0}
+  .card small{color:#64748B;font-size:11px}
+  .card strong{font-size:13px}
+  .ftr{text-align:center;color:#475569;font-size:12px;margin-top:36px;padding-bottom:20px}
+</style></head><body>
+<div class="hdr">
+  <h1>🫀 Indian Liver Patient Predictor — Pipeline Dashboard</h1>
+  <p>Logistic Regression · Random Forest · XGBoost · SVM · KNN &nbsp;|&nbsp; 583 patients · 10 features · Binary classification</p>
+</div>
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="n">583</div><div class="l">Patients</div></div>
+    <div class="stat"><div class="n">10</div><div class="l">Features</div></div>
+    <div class="stat"><div class="n" style="color:#EF4444">71%</div><div class="l">Disease rate</div></div>
+    <div class="stat"><div class="n" style="color:#22C55E">0.983</div><div class="l">Test Accuracy</div></div>
+    <div class="stat"><div class="n" style="color:#3B82F6">0.999</div><div class="l">ROC-AUC</div></div>
+    <div class="stat"><div class="n" style="color:#F97316">0.983</div><div class="l">CV F1</div></div>
+  </div>
+  <div class="grid">
+      <a class="card" href="eda_class_balance.html" target="_blank">
+        <span class="icon">⚖️</span>
+        <div><strong>Class Distribution</strong><br><small>71% liver disease vs 29% healthy — class imbalance</small></div>
+      </a>
+
+      <a class="card" href="eda_gender.html" target="_blank">
+        <span class="icon">👤</span>
+        <div><strong>Gender Analysis</strong><br><small>Male/female split by class</small></div>
+      </a>
+
+      <a class="card" href="eda_age.html" target="_blank">
+        <span class="icon">📅</span>
+        <div><strong>Age Distribution</strong><br><small>Histogram + density by class</small></div>
+      </a>
+
+      <a class="card" href="eda_biomarkers.html" target="_blank">
+        <span class="icon">🧪</span>
+        <div><strong>Biomarker Violin Plots</strong><br><small>All 8 liver function tests by class</small></div>
+      </a>
+
+      <a class="card" href="eda_correlation.html" target="_blank">
+        <span class="icon">🔥</span>
+        <div><strong>Correlation Heatmap</strong><br><small>Pearson correlations between all features</small></div>
+      </a>
+
+      <a class="card" href="eda_sgpt_sgot.html" target="_blank">
+        <span class="icon">📈</span>
+        <div><strong>SGPT vs SGOT Trend</strong><br><small>Relation & trend between ALT and AST</small></div>
+      </a>
+
+      <a class="card" href="eda_bilirubin.html" target="_blank">
+        <span class="icon">🟡</span>
+        <div><strong>Bilirubin Correlation</strong><br><small>Total vs Direct Bilirubin scatter</small></div>
+      </a>
+
+      <a class="card" href="eda_albumin_protein.html" target="_blank">
+        <span class="icon">💊</span>
+        <div><strong>Albumin & Proteins</strong><br><small>Box plots by class</small></div>
+      </a>
+
+      <a class="card" href="feature_selection.html" target="_blank">
+        <span class="icon">📐</span>
+        <div><strong>Feature Selection (MI)</strong><br><small>Mutual information scores</small></div>
+      </a>
+
+      <a class="card" href="model_comparison.html" target="_blank">
+        <span class="icon">🏆</span>
+        <div><strong>Model Comparison</strong><br><small>LR · RF · XGB · SVM · KNN — 5-fold CV</small></div>
+      </a>
+
+      <a class="card" href="model_radar.html" target="_blank">
+        <span class="icon">🕸️</span>
+        <div><strong>Radar Chart</strong><br><small>Multi-metric performance radar</small></div>
+      </a>
+
+      <a class="card" href="confusion_matrix.html" target="_blank">
+        <span class="icon">🎯</span>
+        <div><strong>Confusion Matrix</strong><br><small>Random Forest on test set</small></div>
+      </a>
+
+      <a class="card" href="roc_curve.html" target="_blank">
+        <span class="icon">📈</span>
+        <div><strong>ROC Curve</strong><br><small>AUC = 0.999 · Optimal threshold marked</small></div>
+      </a>
+
+      <a class="card" href="pr_curve.html" target="_blank">
+        <span class="icon">📉</span>
+        <div><strong>Precision–Recall</strong><br><small>Average precision curve</small></div>
+      </a>
+
+      <a class="card" href="threshold_analysis.html" target="_blank">
+        <span class="icon">⚙️</span>
+        <div><strong>Threshold Analysis</strong><br><small>Acc / Precision / Recall / F1 vs threshold</small></div>
+      </a>
+
+      <a class="card" href="shap_global.html" target="_blank">
+        <span class="icon">💡</span>
+        <div><strong>SHAP Global Importance</strong><br><small>Feature impact ranking</small></div>
+      </a>
+
+      <a class="card" href="shap_beeswarm.html" target="_blank">
+        <span class="icon">🐝</span>
+        <div><strong>SHAP Beeswarm</strong><br><small>Per-patient SHAP scatter</small></div>
+      </a>
+
+      <a class="card" href="shap_waterfall.html" target="_blank">
+        <span class="icon">🌊</span>
+        <div><strong>SHAP Waterfall</strong><br><small>Single patient SHAP explanation</small></div>
+      </a></div>
+</div>
+<div class="ftr">Best model: <strong>Random Forest</strong> &nbsp;|&nbsp;
+Personal Project — Rayala Madhu Bhanu Varma</div>
+</body></html>

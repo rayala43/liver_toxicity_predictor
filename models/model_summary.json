@@ -1,0 +1,59 @@
+{
+  "best_model": "Random Forest",
+  "test_accuracy": 0.9829,
+  "test_auc": 0.9993,
+  "features": [
+    "Age",
+    "Gender_enc",
+    "log_Total_Bilirubin",
+    "log_Direct_Bilirubin",
+    "log_Alkaline_Phosphotase",
+    "log_Alamine_Aminotransferase",
+    "log_Aspartate_Aminotransferase",
+    "Total_Protiens",
+    "Albumin",
+    "Albumin_and_Globulin_Ratio"
+  ],
+  "cv_results": {
+    "Logistic Regression": {
+      "Accuracy": 0.9759,
+      "F1": 0.9752,
+      "ROC-AUC": 0.9943,
+      "Precision": 0.9937,
+      "Recall": 0.9577,
+      "Acc Std": 0.016
+    },
+    "Random Forest": {
+      "Accuracy": 0.9834,
+      "F1": 0.9831,
+      "ROC-AUC": 0.9973,
+      "Precision": 0.997,
+      "Recall": 0.9698,
+      "Acc Std": 0.0088
+    },
+    "XGBoost": {
+      "Accuracy": 0.9834,
+      "F1": 0.9832,
+      "ROC-AUC": 0.9942,
+      "Precision": 0.994,
+      "Recall": 0.9729,
+      "Acc Std": 0.0056
+    },
+    "SVM (RBF)": {
+      "Accuracy": 0.985,
+      "F1": 0.9846,
+      "ROC-AUC": 0.9949,
+      "Precision": 0.997,
+      "Recall": 0.9728,
+      "Acc Std": 0.0106
+    },
+    "KNN (k=7)": {
+      "Accuracy": 0.9382,
+      "F1": 0.9339,
+      "ROC-AUC": 0.9852,
+      "Precision": 1.0,
+      "Recall": 0.8764,
+      "Acc Std": 0.0121
+    }
+  }
+}
