@@ -96,6 +96,8 @@ src/pipeline.py
 | **🏆 Model Performance** | CV comparison, radar, confusion matrix, ROC, PR, threshold sensitivity |
 | **💡 SHAP Explainability** | Global importance, beeswarm, per-patient waterfall with slider |
 
+<img width="1738" height="910" alt="image" src="https://github.com/user-attachments/assets/3aab15a2-74ed-4192-9c93-1436e6f46d04" />
+
 ---
 
 ## Project Structure
@@ -152,5 +154,3 @@ UCI ML Repository: [Indian Liver Patient Dataset](https://archive.ics.uci.edu/ml
 
 ---
 
-## License
-MIT
